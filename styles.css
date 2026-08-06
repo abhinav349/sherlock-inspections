@@ -614,6 +614,8 @@ h4 { font-size: 1.15rem; font-weight: 700; }
     overflow: hidden;
 }
 
+.about-img-placeholder picture { display: contents; }
+
 .about-img-placeholder img {
     width: 100%;
     height: 100%;
@@ -1104,7 +1106,7 @@ h4 { font-size: 1.15rem; font-weight: 700; }
     letter-spacing: 1px;
 }
 
-.feature h4 {
+.feature h3 {
     color: #ffffff;
     margin-bottom: 12px;
     font-size: 1.05rem;
@@ -1159,7 +1161,8 @@ h4 { font-size: 1.15rem; font-weight: 700; }
     margin-bottom: 12px;
 }
 
-.area-card h4 {
+.area-card h3 {
+    font-size: 1.15rem;
     margin-bottom: 8px;
     color: var(--text);
 }

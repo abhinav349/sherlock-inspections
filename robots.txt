@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# No crawl traps on this site — a single static page plus assets.
+Disallow: /config.js
+
+Sitemap: https://www.atlanticsherlockinspections.com/sitemap.xml
