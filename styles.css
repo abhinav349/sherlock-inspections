@@ -614,6 +614,8 @@ h4 { font-size: 1.15rem; font-weight: 700; }
     overflow: hidden;
 }
 
+.about-img-placeholder picture { display: contents; }
+
 .about-img-placeholder img {
     width: 100%;
     height: 100%;
@@ -1104,7 +1106,7 @@ h4 { font-size: 1.15rem; font-weight: 700; }
     letter-spacing: 1px;
 }
 
-.feature h4 {
+.feature h3 {
     color: #ffffff;
     margin-bottom: 12px;
     font-size: 1.05rem;
@@ -1114,6 +1116,75 @@ h4 { font-size: 1.15rem; font-weight: 700; }
     color: rgba(255, 255, 255, 0.6);
     font-size: 0.88rem;
     line-height: 1.7;
+}
+
+/* Areas We Serve */
+.areas {
+    padding: 140px 0;
+    position: relative;
+    background: var(--bg);
+}
+
+.areas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+}
+
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.area-card {
+    padding: 32px 28px;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+
+.area-card:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.area-icon {
+    display: inline-block;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.area-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+.area-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.areas-note {
+    text-align: center;
+    margin-top: 40px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.areas-note a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 /* Testimonials */
@@ -1585,6 +1656,7 @@ h4 { font-size: 1.15rem; font-weight: 700; }
 @media (max-width: 1024px) {
     .services-grid { grid-template-columns: repeat(2, 1fr); }
     .features-grid { grid-template-columns: repeat(2, 1fr); }
+    .areas-grid { grid-template-columns: repeat(2, 1fr); }
     .testimonials-track { grid-template-columns: 1fr; max-width: 600px; margin: 0 auto; }
     .pricing-grid { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; }
     .price-card.featured { transform: none; }
@@ -1632,7 +1704,8 @@ h4 { font-size: 1.15rem; font-weight: 700; }
     
     .services-grid { grid-template-columns: 1fr; }
     .features-grid { grid-template-columns: 1fr; }
-    
+    .areas-grid { grid-template-columns: 1fr; }
+
     .book-grid { grid-template-columns: 1fr; gap: 40px; }
     .book-form-wrapper { padding: 24px; }
     .form-row { grid-template-columns: 1fr; }
@@ -1655,7 +1728,7 @@ h4 { font-size: 1.15rem; font-weight: 700; }
 
     .price-item { padding: 16px 0; }
     .section-header { margin-bottom: 48px; }
-    .about, .services, .pricing, .why-us, .testimonials, .book { padding: 100px 0; }
+    .about, .services, .pricing, .why-us, .areas, .testimonials, .book { padding: 100px 0; }
 }
 
 /* Very small screens */
